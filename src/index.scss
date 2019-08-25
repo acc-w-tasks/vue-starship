@@ -1,0 +1,48 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+button{
+  -webkit-appearance: none;
+  padding: 5px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  background: rgba(0,0,0,.2);
+  margin: 0px 5px;
+  &.primary{
+    background: #007bff;
+    color: white;
+  }
+  &.disabled{
+    cursor: default;
+    background: rgba(0,0,0,.5);
+  }
+}
+
+input{
+  width: 100%;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  &:disabled{
+    background: rgba(0,0,0,.1);
+  }
+}
+
+.fade-enter,
+.fade-leave-to{
+  opacity: .4;
+  transition: opacity .1s linear;
+}
+.fade-enter-to,
+.fade-leave{
+  opacity: 1;
+  transition: opacity .1s linear;
+}
