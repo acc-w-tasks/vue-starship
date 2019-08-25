@@ -129,7 +129,7 @@ export default {
     }
 
     &.opened {
-      &:before {
+      .list__item-arrow:before {
         transform: translateY(-50%) rotate(90deg);
         transition: transform 0.1s linear;
       }
