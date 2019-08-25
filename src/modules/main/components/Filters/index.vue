@@ -1,7 +1,6 @@
 <template>
   <article class="filters">
     <div
-      @click="onFilter(filter)"
       v-for="filter in list"
       :key="filter"
       :class="`filters__item ${isCurrentFilter(filter) ? 'active' : ''}`"
@@ -19,9 +18,6 @@
 <script>
 export default {
   methods: {
-    onFilter(filter) {
-      this.$emit("filter", filter);
-    },
     isCurrentFilter(filter) {
       return this.$route.query["filterBy"] === filter;
     }
